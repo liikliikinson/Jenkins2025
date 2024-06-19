@@ -5,9 +5,8 @@ pipeline {
     }
     stages {
         stage('Opening'){
-            parallel task {
-                    "taskOne" : { echo 'This is task One },
-                    "taskTwo" : { echo 'This is task Two }
+            parallel {
+                    "task1One" : { echo 'This is task One }, "task2Two" : { echo 'This is task Two }
                 }
             }
         stage('Build') {
